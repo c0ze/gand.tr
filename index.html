@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GAND.TR | Architecture & Code - Bespoke Software Development</title>
-    <meta name="description" content="Gand Technology Services - Bespoke software development and system architecture consulting. We carve software meant to last. Ruby, Go, Linux. Istanbul & Tokyo." />
-    <meta name="keywords" content="Gand, GAND.TR, software consulting, bespoke development, Ruby developer, Go developer, system architecture, Linux, Istanbul, Tokyo, legacy modernization" />
+    <meta name="description" content="Gand Technology Services - Bespoke software development and system architecture consulting. We carve software meant to last. AI-augmented engineering. Istanbul & Tokyo." />
+    <meta name="keywords" content="Gand, GAND.TR, software consulting, bespoke development, AI engineering, system architecture, cloud infrastructure, Istanbul, Tokyo, legacy modernization" />
     <meta name="author" content="Gand Technology Services" />
 
     <meta property="og:title" content="GAND.TR | Architecture & Code" />
@@ -15,7 +15,7 @@
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="GAND.TR | Architecture & Code" />
-    <meta name="twitter:description" content="Bespoke software development. Ruby, Go, Linux. Istanbul & Tokyo." />
+    <meta name="twitter:description" content="Bespoke software development. AI-augmented engineering. Istanbul & Tokyo." />
 
     <script type="application/ld+json">
     {
@@ -27,7 +27,7 @@
       "description": "Bespoke software development and system architecture consulting. We carve software meant to last.",
       "foundingDate": "2025",
       "areaServed": ["Istanbul", "Tokyo", "Worldwide"],
-      "knowsAbout": ["Ruby", "Go", "Linux", "System Architecture", "Legacy Modernization", "Backend Development"],
+      "knowsAbout": ["Software Development", "AI Engineering", "System Architecture", "Cloud Infrastructure", "Legacy Modernization", "Backend Development"],
       "slogan": "Craft. Culture. Code.",
       "email": "contact@gand.tr",
       "address": [
@@ -51,7 +51,7 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Bespoke Development",
-              "description": "Backend engines built with precision. Ruby and Go."
+              "description": "Backend engines built with precision using the best tools available."
             }
           },
           {
@@ -59,7 +59,7 @@
             "itemOffered": {
               "@type": "Service",
               "name": "System Architecture",
-              "description": "Immutable infrastructure and Linux environments."
+              "description": "Scalable cloud infrastructure and AI-augmented workflows."
             }
           },
           {
@@ -74,48 +74,225 @@
       }
     }
     </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
 
-        :root {
-            --bg-color: #1a1b1e; /* Dark Slate Stone */
-            --card-bg: #25262b;   /* Lighter Stone */
-            --text-main: #c1c2c5; /* Old Paper/Mist */
-            --text-header: #e7e7e7; /* White Marble */
-            --accent-wood: #a67b5b; /* Aged Wood */
-            --accent-moss: #5c7c70; /* Nordic Green */
+    <!-- Fonts: Cinzel (headings), Cormorant Garamond (body), Cormorant SC (accents) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,300;1,400&family=Cormorant+SC:wght@400;600&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Anti-FOUC: set theme and language before paint -->
+    <script>
+    (function(){var d=document.documentElement;var t=localStorage.getItem('gand-theme');if(!t){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme:light)').matches?'light':window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'mid'}d.setAttribute('data-theme',t);var l=localStorage.getItem('gand-lang');if(!l){var n=navigator.language||'';l=n.startsWith('ja')?'ja':n.startsWith('tr')?'tr':'en'}d.setAttribute('data-lang',l);d.lang=l})();
+    </script>
+
+    <style>
+        /* ===========================
+           1. THEME DEFINITIONS
+           =========================== */
+
+        /* Mid Theme (default) — aged manuscript by firelight */
+        :root,
+        [data-theme="mid"] {
+            --bg-primary:       #1c1d21;
+            --bg-secondary:     #161719;
+            --bg-card:          #26272c;
+            --bg-card-end:      #1c1d21;
+            --bg-hero-glow:     #2a2c32;
+            --text-body:        #c4c0b8;
+            --text-heading:     #e8e4dc;
+            --text-muted:       #7a7670;
+            --text-accent:      #b0aba2;
+            --accent-primary:   #b8865e;
+            --accent-secondary: #6a8b7d;
+            --accent-stone:     #5f6e78;
+            --border-subtle:    rgba(184, 134, 94, 0.2);
+            --border-card:      rgba(255, 255, 255, 0.05);
+            --shadow-soft:      rgba(0, 0, 0, 0.5);
+            --shadow-inset:     rgba(0, 0, 0, 0.3);
+            --shadow-glow:      rgba(184, 134, 94, 0.2);
+            --toggle-bg:        #2a2c32;
         }
 
-        * {
+        /* Dark Theme — true dark, OLED-friendly */
+        [data-theme="dark"] {
+            --bg-primary:       #0c0c0e;
+            --bg-secondary:     #080809;
+            --bg-card:          #141416;
+            --bg-card-end:      #0c0c0e;
+            --bg-hero-glow:     #18181c;
+            --text-body:        #b8b4ac;
+            --text-heading:     #f0ece4;
+            --text-muted:       #5c5852;
+            --text-accent:      #9e9890;
+            --accent-primary:   #c9935f;
+            --accent-secondary: #78a392;
+            --accent-stone:     #4e5d68;
+            --border-subtle:    rgba(201, 147, 95, 0.15);
+            --border-card:      rgba(255, 255, 255, 0.03);
+            --shadow-soft:      rgba(0, 0, 0, 0.7);
+            --shadow-inset:     rgba(0, 0, 0, 0.5);
+            --shadow-glow:      rgba(201, 147, 95, 0.15);
+            --toggle-bg:        #18181c;
+        }
+
+        /* Light Theme — warm vellum, old manuscript */
+        [data-theme="light"] {
+            --bg-primary:       #f0ebe1;
+            --bg-secondary:     #e6e0d4;
+            --bg-card:          #f5f1e8;
+            --bg-card-end:      #ede8de;
+            --bg-hero-glow:     #f7f3ea;
+            --text-body:        #3d3830;
+            --text-heading:     #1e1b16;
+            --text-muted:       #8a8279;
+            --text-accent:      #5a5349;
+            --accent-primary:   #8b5e3c;
+            --accent-secondary: #4a6e5e;
+            --accent-stone:     #8a9199;
+            --border-subtle:    rgba(139, 94, 60, 0.25);
+            --border-card:      rgba(0, 0, 0, 0.06);
+            --shadow-soft:      rgba(0, 0, 0, 0.1);
+            --shadow-inset:     rgba(0, 0, 0, 0.12);
+            --shadow-glow:      rgba(139, 94, 60, 0.15);
+            --toggle-bg:        #e6e0d4;
+        }
+
+        /* ===========================
+           2. RESET & BASE
+           =========================== */
+
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: 'Lora', serif;
-            line-height: 1.6;
-            overflow-x: hidden;
+        html {
+            scroll-behavior: smooth;
         }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-body);
+            font-family: 'Cormorant Garamond', 'Georgia', serif;
+            font-weight: 500;
+            font-size: 1.05rem;
+            line-height: 1.75;
+            overflow-x: hidden;
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+        /* Japanese font override */
+        [data-lang="ja"] body,
+        [data-lang="ja"] p,
+        [data-lang="ja"] .hero-quote,
+        [data-lang="ja"] .work-card__type,
+        [data-lang="ja"] .work-tag,
+        [data-lang="ja"] .works-subtitle,
+        [data-lang="ja"] .nav-date,
+        [data-lang="ja"] .footer-locations,
+        [data-lang="ja"] .footer-copyright {
+            font-family: 'Noto Serif JP', 'Cormorant Garamond', serif;
+        }
+
+        /* Turkish uses the same Latin fonts — no override needed */
+
+        /* ===========================
+           3. TYPOGRAPHY
+           =========================== */
 
         h1, h2, h3, .nav-logo {
             font-family: 'Cinzel', serif;
-            color: var(--text-header);
+            color: var(--text-heading);
             text-transform: uppercase;
             letter-spacing: 0.1em;
+            line-height: 1.3;
         }
 
-        /* --- NAVIGATION --- */
+        p {
+            max-width: 65ch;
+        }
+
+        strong {
+            font-weight: 600;
+            color: var(--text-heading);
+        }
+
+        /* ===========================
+           4. ACCESSIBILITY & UTILITIES
+           =========================== */
+
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: 1rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--accent-primary);
+            color: var(--bg-primary);
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            text-decoration: none;
+            z-index: 1000;
+            border-radius: 0 0 4px 4px;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--accent-primary);
+            outline-offset: 3px;
+        }
+
+        :focus:not(:focus-visible) {
+            outline: none;
+        }
+
+        /* Ornamental divider */
+        .ornament {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.25rem;
+            max-width: 280px;
+            margin: 0 auto;
+            padding: 3rem 0;
+        }
+
+        .ornament::before,
+        .ornament::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to var(--ornament-dir, right), transparent, var(--accent-primary), transparent);
+            opacity: 0.3;
+        }
+
+        .ornament::before { --ornament-dir: right; }
+        .ornament::after  { --ornament-dir: left; }
+
+        .ornament-rune {
+            color: var(--accent-primary);
+            opacity: 0.4;
+            font-size: 0.9rem;
+            letter-spacing: 0.3em;
+        }
+
+        /* ===========================
+           5. NAVIGATION
+           =========================== */
+
         nav {
-            padding: 2rem;
+            padding: 1.5rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
-            border-bottom: 1px solid rgba(166, 123, 91, 0.2);
+            border-bottom: 1px solid var(--border-subtle);
         }
 
         .nav-logo {
@@ -123,58 +300,198 @@
             font-weight: 700;
         }
 
-        .nav-logo span { color: var(--accent-wood); }
+        .nav-logo span {
+            color: var(--accent-primary);
+        }
 
-        /* --- HERO SECTION --- */
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .nav-date {
+            font-family: 'Cormorant SC', serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            color: var(--text-muted);
+        }
+
+        /* ===========================
+           6. THEME TOGGLE
+           =========================== */
+
+        .theme-toggle {
+            display: inline-flex;
+            align-items: center;
+            background: var(--toggle-bg);
+            border: 1px solid var(--border-subtle);
+            border-radius: 2rem;
+            padding: 0.2rem;
+            cursor: pointer;
+            position: relative;
+            font-size: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .theme-toggle__option {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.1rem;
+            height: 2.1rem;
+            font-size: 0.8rem;
+            border-radius: 50%;
+            color: var(--text-muted);
+            transition: color 0.3s ease;
+            position: relative;
+            z-index: 1;
+            -webkit-user-select: none;
+            user-select: none;
+            cursor: pointer;
+        }
+
+        .theme-toggle__option.active {
+            color: var(--bg-primary);
+        }
+
+        .theme-toggle__slider {
+            position: absolute;
+            width: 2.1rem;
+            height: 2.1rem;
+            background: var(--accent-primary);
+            border-radius: 50%;
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            left: 0.2rem;
+            z-index: 0;
+        }
+
+        [data-theme="light"] .theme-toggle__slider { transform: translateX(0); }
+        [data-theme="mid"]   .theme-toggle__slider { transform: translateX(2.1rem); }
+        [data-theme="dark"]  .theme-toggle__slider { transform: translateX(4.2rem); }
+
+        /* ===========================
+           6b. LANGUAGE TOGGLE
+           =========================== */
+
+        .lang-toggle {
+            display: inline-flex;
+            align-items: center;
+            background: var(--toggle-bg);
+            border: 1px solid var(--border-subtle);
+            border-radius: 2rem;
+            padding: 0.2rem;
+            cursor: pointer;
+            position: relative;
+            font-size: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .lang-toggle__option {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.1rem;
+            height: 2.1rem;
+            font-family: 'Cormorant SC', serif;
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0;
+            border-radius: 50%;
+            color: var(--text-muted);
+            transition: color 0.3s ease;
+            position: relative;
+            z-index: 1;
+            -webkit-user-select: none;
+            user-select: none;
+            cursor: pointer;
+        }
+
+        .lang-toggle__option.active {
+            color: var(--bg-primary);
+        }
+
+        .lang-toggle__slider {
+            position: absolute;
+            width: 2.1rem;
+            height: 2.1rem;
+            background: var(--accent-secondary);
+            border-radius: 50%;
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            left: 0.2rem;
+            z-index: 0;
+        }
+
+        [data-lang="en"] .lang-toggle__slider { transform: translateX(0); }
+        [data-lang="tr"] .lang-toggle__slider { transform: translateX(2.1rem); }
+        [data-lang="ja"] .lang-toggle__slider { transform: translateX(4.2rem); }
+
+        /* ===========================
+           7. HERO
+           =========================== */
+
         .hero {
-            height: 80vh;
+            min-height: 80vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
+            padding: 4rem 2rem;
             position: relative;
-            background: radial-gradient(circle at center, #2c2e33 0%, var(--bg-color) 70%);
+            background: radial-gradient(ellipse at center, var(--bg-hero-glow) 0%, var(--bg-primary) 70%);
         }
 
         .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.25rem;
+            text-shadow: 0 4px 15px var(--shadow-soft);
         }
 
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
+        .hero-quote {
+            font-size: 1.15rem;
+            max-width: 550px;
             margin-bottom: 3rem;
             font-style: italic;
-            opacity: 0.8;
+            color: var(--text-accent);
+            line-height: 1.8;
         }
 
         .cta-button {
+            display: inline-block;
             padding: 1rem 2.5rem;
             background-color: transparent;
-            border: 2px solid var(--accent-wood);
-            color: var(--accent-wood);
+            border: 1.5px solid var(--accent-primary);
+            color: var(--accent-primary);
             font-family: 'Cinzel', serif;
-            font-size: 1rem;
+            font-size: 0.95rem;
+            letter-spacing: 0.12em;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
         }
 
         .cta-button:hover {
-            background-color: var(--accent-wood);
-            color: var(--bg-color);
+            background-color: var(--accent-primary);
+            color: var(--bg-primary);
+            box-shadow: 0 4px 25px var(--shadow-glow);
         }
 
-        /* --- PHILOSOPHY (The Staff & Stone) --- */
+        .cta-button:focus-visible {
+            outline-offset: 5px;
+            box-shadow: 0 0 0 3px var(--shadow-glow);
+        }
+
+        /* ===========================
+           8. PHILOSOPHY (Staff & Stone)
+           =========================== */
+
         .philosophy {
             max-width: 1000px;
-            margin: 4rem auto;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 3rem;
             padding: 2rem;
         }
 
@@ -183,178 +500,686 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            padding: 2rem;
-            background: var(--card-bg);
-            border: 1px solid rgba(255,255,255,0.05);
+            padding: 2.5rem 2rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            transition: border-color 0.3s ease;
         }
 
-        /* CSS DRAWING: THE STAFF (GANDR) */
+        .totem-container:hover {
+            border-color: var(--border-subtle);
+        }
+
+        .totem-container p {
+            color: var(--text-accent);
+        }
+
+        /* CSS ART: THE STAFF (GANDR) — traveler's staff with finial and carved bands */
         .icon-staff {
-            width: 8px;
+            width: 6px;
             height: 100px;
-            background: var(--accent-wood);
+            background: linear-gradient(to bottom, var(--accent-primary), transparent);
             margin-bottom: 1.5rem;
             position: relative;
-            border-radius: 2px;
-        }
-        .icon-staff::before { /* The top knob */
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: -6px;
-            width: 20px;
-            height: 15px;
-            background: var(--accent-wood);
-            border-radius: 2px;
+            border-radius: 1px;
         }
 
-        /* CSS DRAWING: THE STONE (BALBAL) */
-        .icon-stone {
-            width: 60px;
-            height: 100px;
-            background: #566573;
-            margin-bottom: 1.5rem;
-            border-radius: 30px 30px 5px 5px;
-            position: relative;
-            box-shadow: inset -5px -5px 20px rgba(0,0,0,0.3);
-        }
-        .icon-stone::after { /* The carved face/cup */
+        .icon-staff::before {
             content: '';
             position: absolute;
-            top: 25px;
+            top: -14px;
             left: 50%;
             transform: translateX(-50%);
-            width: 40px;
+            width: 18px;
+            height: 18px;
+            background: var(--accent-primary);
+            border-radius: 50% 50% 4px 4px;
+            box-shadow: 0 2px 10px var(--shadow-soft);
+        }
+
+        .icon-staff::after {
+            content: '';
+            position: absolute;
+            top: 18px;
+            left: -4px;
+            width: 14px;
             height: 2px;
-            background: rgba(0,0,0,0.3);
+            background: var(--accent-primary);
+            opacity: 0.5;
+            box-shadow:
+                0 10px 0 0 var(--accent-primary),
+                0 20px 0 0 var(--accent-primary);
+        }
+
+        /* CSS ART: THE STONE (BALBAL) — memorial stone with carved features */
+        .icon-stone {
+            width: 52px;
+            height: 90px;
+            background: var(--accent-stone);
+            margin-bottom: 1.5rem;
+            border-radius: 24px 24px 4px 4px;
+            position: relative;
+            box-shadow:
+                inset -4px -4px 15px var(--shadow-inset),
+                inset 2px 2px 8px rgba(255, 255, 255, 0.04);
+        }
+
+        .icon-stone::before {
+            content: '';
+            position: absolute;
+            top: 22px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 1px;
+            background: rgba(0, 0, 0, 0.25);
+            box-shadow:
+                -5px -8px 0 2.5px rgba(0, 0, 0, 0.12),
+                 5px -8px 0 2.5px rgba(0, 0, 0, 0.12);
+        }
+
+        .icon-stone::after {
+            content: '';
+            position: absolute;
+            bottom: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 1px;
+            background: rgba(0, 0, 0, 0.12);
         }
 
         .totem-title {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-bottom: 1rem;
-            color: var(--accent-wood);
+            color: var(--accent-primary);
         }
 
-        /* --- SERVICES --- */
+        /* ===========================
+           9. SERVICES
+           =========================== */
+
         .services {
-            background-color: #151618;
+            background-color: var(--bg-secondary);
             padding: 6rem 2rem;
         }
 
+        .services-heading {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--accent-primary);
+            font-size: 1.4rem;
+            letter-spacing: 0.15em;
+        }
+
         .services-grid {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
 
         .service-card {
-            padding: 2rem;
-            border-left: 2px solid var(--accent-moss);
-            background: linear-gradient(145deg, var(--card-bg), var(--bg-color));
+            padding: 2.5rem 2rem;
+            border-left: 2px solid var(--accent-secondary);
+            background: linear-gradient(145deg, var(--bg-card), var(--bg-card-end));
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px var(--shadow-soft);
+            border-left-color: var(--accent-primary);
         }
 
         .service-card h3 {
             margin-bottom: 1rem;
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             display: flex;
             align-items: center;
         }
 
-        .rune {
-            display: inline-block;
-            margin-right: 10px;
-            font-size: 1.5rem;
-            color: var(--accent-moss);
+        .service-card p {
+            color: var(--text-accent);
         }
 
-        /* --- FOOTER --- */
+        .rune {
+            display: inline-block;
+            margin-right: 0.75rem;
+            font-size: 1.4rem;
+            color: var(--accent-secondary);
+        }
+
+        /* ===========================
+           10. SELECTED WORKS
+           =========================== */
+
+        .works {
+            padding: 6rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .works-heading {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--accent-primary);
+            font-size: 1.4rem;
+            letter-spacing: 0.15em;
+        }
+
+        .works-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            font-style: italic;
+            margin-bottom: 3rem;
+        }
+
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .work-card {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+            padding: 2.5rem 2.25rem 2rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-left: 2px solid var(--accent-secondary);
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .work-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px var(--shadow-soft);
+            border-left-color: var(--accent-primary);
+        }
+
+        .work-card h3 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            font-size: 1.15rem;
+        }
+
+        .work-card__type {
+            display: inline-block;
+            font-family: 'Cormorant SC', serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
+            color: var(--accent-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .work-card p {
+            color: var(--text-accent);
+            flex: 1;
+        }
+
+        .work-card__footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-card);
+        }
+
+        .work-tags {
+            display: flex;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+        }
+
+        .work-tag {
+            font-family: 'Cormorant SC', serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            background: var(--bg-primary);
+            padding: 0.2rem 0.55rem;
+            border: 1px solid var(--border-card);
+        }
+
+        .work-url {
+            font-family: 'Cormorant SC', serif;
+            font-size: 0.8rem;
+            color: var(--accent-primary);
+            letter-spacing: 0.08em;
+            white-space: nowrap;
+            margin-left: 1rem;
+        }
+
+        /* ===========================
+           11. FOOTER
+           =========================== */
+
         footer {
             text-align: center;
             padding: 4rem 2rem;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            font-size: 0.9rem;
-            color: #666;
+            border-top: 1px solid var(--border-card);
+            font-size: 0.95rem;
+            color: var(--text-muted);
         }
-        
+
         .footer-runes {
             letter-spacing: 1em;
             margin-bottom: 1rem;
-            color: var(--accent-wood);
-            opacity: 0.5;
+            color: var(--accent-primary);
+            opacity: 0.4;
         }
 
-        /* Mobile Adjustments */
+        .footer-locations {
+            font-family: 'Cormorant SC', serif;
+            letter-spacing: 0.1em;
+        }
+
+        .footer-copyright {
+            margin-top: 0.75rem;
+            font-size: 0.8rem;
+        }
+
+        /* ===========================
+           12. REDUCED MOTION
+           =========================== */
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* ===========================
+           13. RESPONSIVE: TABLET
+           =========================== */
+
+        @media (max-width: 1024px) {
+            .philosophy {
+                gap: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+
+        /* ===========================
+           14. RESPONSIVE: MOBILE
+           =========================== */
+
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .philosophy { grid-template-columns: 1fr; }
+            body {
+                font-size: 1rem;
+            }
+
+            nav {
+                padding: 1.25rem 1.5rem;
+            }
+
+            .nav-date {
+                display: none;
+            }
+
+            .nav-right {
+                gap: 0.5rem;
+            }
+
+            .hero {
+                min-height: 70vh;
+                padding: 3rem 1.5rem;
+            }
+
+            .hero-quote {
+                font-size: 1.05rem;
+                padding: 0 0.5rem;
+            }
+
+            .philosophy {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 1.5rem;
+            }
+
+            .services {
+                padding: 4rem 1.25rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .works {
+                padding: 4rem 1.25rem;
+            }
+
+            .works-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ornament {
+                padding: 2rem 0;
+            }
+
+            footer {
+                padding: 3rem 1.5rem;
+            }
+        }
+
+        /* ===========================
+           15. RESPONSIVE: SMALL PHONES
+           =========================== */
+
+        @media (max-width: 480px) {
+            .hero {
+                min-height: 65vh;
+                padding: 2.5rem 1rem;
+            }
+
+            .hero-quote {
+                font-size: 0.95rem;
+            }
+
+            .cta-button {
+                padding: 0.85rem 2rem;
+                font-size: 0.85rem;
+            }
+
+            .totem-container {
+                padding: 1.75rem 1.25rem;
+            }
+
+            .service-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .work-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .ornament {
+                max-width: 200px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <nav>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <nav aria-label="Main navigation">
         <div class="nav-logo">GAND<span>.TR</span></div>
-        <div style="font-size: 0.8rem; letter-spacing: 2px;">EST. MMXXV</div>
+        <div class="nav-right">
+            <span class="nav-date">EST. MMXXV</span>
+            <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language" title="Switch language">
+                <span class="lang-toggle__option" data-lang="en">EN</span>
+                <span class="lang-toggle__option" data-lang="tr">TR</span>
+                <span class="lang-toggle__option" data-lang="ja">JA</span>
+                <span class="lang-toggle__slider" aria-hidden="true"></span>
+            </button>
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch theme" title="Switch theme">
+                <span class="theme-toggle__option" data-theme="light" aria-label="Light theme">&#9788;</span>
+                <span class="theme-toggle__option" data-theme="mid" aria-label="Mid theme">&#9680;</span>
+                <span class="theme-toggle__option" data-theme="dark" aria-label="Dark theme">&#9789;</span>
+                <span class="theme-toggle__slider" aria-hidden="true"></span>
+            </button>
+        </div>
     </nav>
 
-    <header class="hero">
-        <h1>Craft. Culture. Code.</h1>
-        <p>"We do not write disposable scripts.<br>We carve software meant to last."</p>
-        <a href="mailto:contact@gand.tr" class="cta-button">Initiate Contact</a>
-    </header>
+    <main id="main-content">
 
-    <section class="philosophy">
-        <div class="totem-container">
-            <div class="icon-staff"></div>
-            <h2 class="totem-title">The Staff (Gandr)</h2>
-            <p>The symbol of the traveler and the maker. We navigate complex systems and channel raw logic into functional power. Pure Ruby. Pure Go.</p>
+        <header class="hero">
+            <h1 data-i18n="hero.title">Craft. Culture. Code.</h1>
+            <p class="hero-quote" data-i18n="hero.quote">"We do not write disposable scripts.<br>We carve software meant to last."</p>
+            <a href="mailto:contact@gand.tr" class="cta-button" data-i18n="hero.cta">Initiate Contact</a>
+        </header>
+
+        <div class="ornament" aria-hidden="true">
+            <span class="ornament-rune">&#5765;</span>
         </div>
 
-        <div class="totem-container">
-            <div class="icon-stone"></div>
-            <h2 class="totem-title">The Stone (Balbal)</h2>
-            <p>The eternal watcher. Like the Balbals of the steppe, our infrastructure stands against time and elements. Unshakeable Linux architecture.</p>
+        <section class="philosophy">
+            <div class="totem-container">
+                <div class="icon-staff"></div>
+                <h2 class="totem-title" data-i18n="staff.title">The Staff (Gandr)</h2>
+                <p data-i18n="staff.desc">The symbol of the traveler and the maker. We navigate complex systems and channel the right tools into functional power. Always the best instrument for the task at hand.</p>
+            </div>
+
+            <div class="totem-container">
+                <div class="icon-stone"></div>
+                <h2 class="totem-title" data-i18n="stone.title">The Stone (Balbal)</h2>
+                <p data-i18n="stone.desc">The eternal watcher. Like the Balbals of the steppe, our infrastructure stands against time and elements. Resilient systems built to endure.</p>
+            </div>
+        </section>
+
+        <div class="ornament" aria-hidden="true">
+            <span class="ornament-rune">&#5765;</span>
         </div>
-    </section>
 
-    <section class="services">
-        <div class="services-grid">
-            <div class="service-card">
-                <h3><span class="rune">ᚲ</span> CARVING</h3>
-                <p><strong>Bespoke Development.</strong> Backend engines built with the precision of a craftsman. No bloat. No frameworks that die in a year. Just iron-clad logic.</p>
-            </div>
-            
-            <div class="service-card">
-                <h3><span class="rune">ᛟ</span> FOUNDATION</h3>
-                <p><strong>System Architecture.</strong> We build the ground you stand on. Immutable infrastructure, secured networks, and Omarchy-based Linux environments.</p>
-            </div>
-
-            <div class="service-card">
-                <h3><span class="rune">ᚱ</span> RESTORATION</h3>
-                <p><strong>Legacy Consulting.</strong> The old ways were strong. We repair and modernize legacy systems, honoring the original code while forging it for the future.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="services" style="padding-top: 0;">
-        <h2 style="text-align: center; margin-bottom: 2rem; color: var(--accent-wood);">SELECTED WORKS</h2>
-        <div class="services-grid">
-            <a href="https://skriv.ist" target="_blank" style="text-decoration: none; color: inherit;">
-                <div class="service-card" style="cursor: pointer; transition: transform 0.2s;">
-                    <h3><span class="rune">ᛊ</span> SKRIV.IST</h3>
-                    <p><strong>Ebook Reader.</strong> A minimalist, distraction-free environment for deep reading. Progressive Web App built for focus.</p>
+        <section class="services">
+            <h2 class="services-heading" data-i18n="services.heading">Our Craft</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3><span class="rune">&#5794;</span> <span data-i18n="svc.carving.name">Carving</span></h3>
+                    <p data-i18n="svc.carving.desc"><strong>Bespoke Development.</strong> Backend systems built with precision and care. We select the right technologies for each engagement and leverage AI to accelerate delivery without sacrificing quality.</p>
                 </div>
-            </a>
-        </div>
-    </section>
+
+                <div class="service-card">
+                    <h3><span class="rune">&#5791;</span> <span data-i18n="svc.foundation.name">Foundation</span></h3>
+                    <p data-i18n="svc.foundation.desc"><strong>System Architecture.</strong> We build the ground you stand on. Scalable cloud infrastructure, secured networks, and AI-augmented workflows that grow with your business.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3><span class="rune">&#5809;</span> <span data-i18n="svc.restoration.name">Restoration</span></h3>
+                    <p data-i18n="svc.restoration.desc"><strong>Legacy Consulting.</strong> Proven systems deserve careful evolution. We modernize legacy codebases with a pragmatic approach, preserving what works while preparing them for what comes next.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="works">
+            <h2 class="works-heading" data-i18n="works.heading">Selected Works</h2>
+            <p class="works-subtitle" data-i18n="works.subtitle">Products we have built and maintain</p>
+            <div class="works-grid">
+                <a href="https://skriv.ist" target="_blank" rel="noopener noreferrer" class="work-card">
+                    <div>
+                        <h3><span class="rune">&#5765;</span> Skriv.ist</h3>
+                        <span class="work-card__type" data-i18n="work.skriv.type">Progressive Web App</span>
+                    </div>
+                    <p data-i18n="work.skriv.desc">A minimalist, distraction-free environment for deep reading. Built for focus, designed to disappear.</p>
+                    <div class="work-card__footer">
+                        <div class="work-tags">
+                            <span class="work-tag">React</span>
+                            <span class="work-tag">PWA</span>
+                            <span class="work-tag">Offline</span>
+                        </div>
+                        <span class="work-url">skriv.ist &#8599;</span>
+                    </div>
+                </a>
+                <a href="https://fablecast.kids" target="_blank" rel="noopener noreferrer" class="work-card">
+                    <div>
+                        <h3><span class="rune">&#5800;</span> Fablecast.kids</h3>
+                        <span class="work-card__type" data-i18n="work.fable.type">AI Story Platform</span>
+                    </div>
+                    <p data-i18n="work.fable.desc">Illustrated, narrated bedtime stories for ages 3&#8211;8. Six character series generated and delivered in seven languages.</p>
+                    <div class="work-card__footer">
+                        <div class="work-tags">
+                            <span class="work-tag">React</span>
+                            <span class="work-tag">Firebase</span>
+                            <span class="work-tag">AI</span>
+                        </div>
+                        <span class="work-url">fablecast.kids &#8599;</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
 
     <footer>
-        <div class="footer-runes">ᚠ ᚢ ᚦ ᚨ ᚱ ᚲ</div>
-        <p><strong>GAND.TR</strong> // ISTANBUL // TOKYO</p>
-        <p style="margin-top:10px; font-size: 0.8rem;">&copy; 2025 Gand Technology Services.</p>
+        <div class="footer-runes" aria-hidden="true">&#5792; &#5794; &#5798; &#5800; &#5809; &#5794;</div>
+        <p class="footer-locations" data-i18n="footer.locations"><strong>GAND.TR</strong> &ensp;&#47;&#47;&ensp; Istanbul &ensp;&#47;&#47;&ensp; Tokyo</p>
+        <p class="footer-copyright" data-i18n="footer.copyright">&copy; 2025 Gand Technology Services.</p>
     </footer>
+
+    <!-- Theme + Language logic -->
+    <script>
+    (function() {
+        var root = document.documentElement;
+
+        /* ---- THEME ---- */
+        var THEMES = ['light', 'mid', 'dark'];
+        var themeToggle = document.getElementById('themeToggle');
+        var themeOptions = themeToggle.querySelectorAll('.theme-toggle__option');
+
+        function applyTheme(theme) {
+            root.setAttribute('data-theme', theme);
+            localStorage.setItem('gand-theme', theme);
+            for (var i = 0; i < themeOptions.length; i++) {
+                themeOptions[i].classList.toggle('active', themeOptions[i].getAttribute('data-theme') === theme);
+            }
+        }
+
+        applyTheme(root.getAttribute('data-theme') || 'mid');
+
+        themeToggle.addEventListener('click', function(e) {
+            var opt = e.target.closest('.theme-toggle__option');
+            if (opt) applyTheme(opt.getAttribute('data-theme'));
+        });
+
+        themeToggle.addEventListener('keydown', function(e) {
+            var idx = THEMES.indexOf(root.getAttribute('data-theme'));
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                e.preventDefault(); applyTheme(THEMES[(idx + 1) % 3]);
+            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                e.preventDefault(); applyTheme(THEMES[(idx + 2) % 3]);
+            }
+        });
+
+        /* ---- i18n ---- */
+        var LANGS = ['en', 'tr', 'ja'];
+        var langToggle = document.getElementById('langToggle');
+        var langOptions = langToggle.querySelectorAll('.lang-toggle__option');
+
+        var T = {
+            en: {
+                'hero.title':           'Craft. Culture. Code.',
+                'hero.quote':           '\u201CWe do not write disposable scripts.<br>We carve software meant to last.\u201D',
+                'hero.cta':             'Initiate Contact',
+                'staff.title':          'The Staff (Gandr)',
+                'staff.desc':           'The symbol of the traveler and the maker. We navigate complex systems and channel the right tools into functional power. Always the best instrument for the task at hand.',
+                'stone.title':          'The Stone (Balbal)',
+                'stone.desc':           'The eternal watcher. Like the Balbals of the steppe, our infrastructure stands against time and elements. Resilient systems built to endure.',
+                'services.heading':     'Our Craft',
+                'svc.carving.name':     'Carving',
+                'svc.carving.desc':     '<strong>Bespoke Development.</strong> Backend systems built with precision and care. We select the right technologies for each engagement and leverage AI to accelerate delivery without sacrificing quality.',
+                'svc.foundation.name':  'Foundation',
+                'svc.foundation.desc':  '<strong>System Architecture.</strong> We build the ground you stand on. Scalable cloud infrastructure, secured networks, and AI-augmented workflows that grow with your business.',
+                'svc.restoration.name': 'Restoration',
+                'svc.restoration.desc': '<strong>Legacy Consulting.</strong> Proven systems deserve careful evolution. We modernize legacy codebases with a pragmatic approach, preserving what works while preparing them for what comes next.',
+                'works.heading':        'Selected Works',
+                'works.subtitle':       'Products we have built and maintain',
+                'work.skriv.type':      'Progressive Web App',
+                'work.skriv.desc':      'A minimalist, distraction-free environment for deep reading. Built for focus, designed to disappear.',
+                'work.fable.type':      'AI Story Platform',
+                'work.fable.desc':      'Illustrated, narrated bedtime stories for ages 3\u20118. Six character series generated and delivered in seven languages.',
+                'footer.locations':     '<strong>GAND.TR</strong> \u2002//\u2002 Istanbul \u2002//\u2002 Tokyo',
+                'footer.copyright':     '\u00A9 2025 Gand Technology Services.'
+            },
+            tr: {
+                'hero.title':           'Zanaat. K\u00FClt\u00FCr. Kod.',
+                'hero.quote':           '\u201CG\u00FCnl\u00FCk betikler yazmay\u0131z.<br>Kal\u0131c\u0131 yaz\u0131l\u0131m in\u015Fa ederiz.\u201D',
+                'hero.cta':             '\u0130leti\u015Fime Ge\u00E7',
+                'staff.title':          'Asa (Gandr)',
+                'staff.desc':           'Gezginin ve yap\u0131c\u0131n\u0131n sembol\u00FC. Karma\u015F\u0131k sistemlerde yol al\u0131r, do\u011Fru ara\u00E7lar\u0131 i\u015Flevsel g\u00FCce d\u00F6n\u00FC\u015Ft\u00FCr\u00FCr\u00FCz. Her zaman eldeki g\u00F6rev i\u00E7in en uygun enstr\u00FCman.',
+                'stone.title':          'Ta\u015F (Balbal)',
+                'stone.desc':           'Ebedi bek\u00E7i. Bozk\u0131r\u0131n Balballar\u0131 gibi, altyap\u0131m\u0131z zamana ve ko\u015Fullara kar\u015F\u0131 ayakta durur. Dayanikli, kal\u0131c\u0131 sistemler.',
+                'services.heading':     'Zanaat\u0131m\u0131z',
+                'svc.carving.name':     'Yontma',
+                'svc.carving.desc':     '<strong>\u00D6zel Yaz\u0131l\u0131m.</strong> \u00D6zenle ve titizlikle in\u015Fa edilen arka u\u00E7 sistemleri. Her proje i\u00E7in do\u011Fru teknolojiyi se\u00E7er, kaliteden \u00F6d\u00FCn vermeden teslimat\u0131 h\u0131zland\u0131rmak i\u00E7in yapay zek\u00E2dan yararlan\u0131r\u0131z.',
+                'svc.foundation.name':  'Temel',
+                'svc.foundation.desc':  '<strong>Sistem Mimarisi.</strong> \u00DCzerinde durdu\u011Funuz zemini biz in\u015Fa ederiz. \u00D6l\u00E7eklenebilir bulut altyap\u0131s\u0131, g\u00FCvenli a\u011Flar ve i\u015Finizle birlikte b\u00FCy\u00FCyen yapay zek\u00E2 destekli i\u015F ak\u0131\u015Flar\u0131.',
+                'svc.restoration.name': 'Restorasyon',
+                'svc.restoration.desc': '<strong>Miras Dan\u0131\u015Fmanl\u0131\u011F\u0131.</strong> Kan\u0131tlanm\u0131\u015F sistemler \u00F6zenli bir evrim hak eder. Miras kod tabanlar\u0131n\u0131 pragmatik bir yakla\u015F\u0131mla modernize eder, i\u015Fleyeni koruyarak gelece\u011Fe haz\u0131rlar\u0131z.',
+                'works.heading':        'Se\u00E7me \u00C7al\u0131\u015Fmalar',
+                'works.subtitle':       '\u0130n\u015Fa edip s\u00FCrd\u00FCrd\u00FC\u011F\u00FCm\u00FCz \u00FCr\u00FCnler',
+                'work.skriv.type':      'Progresif Web Uygulamas\u0131',
+                'work.skriv.desc':      'Derin okuma i\u00E7in minimalist, dikkat da\u011F\u0131tmayan bir ortam. Odak i\u00E7in tasarland\u0131, g\u00F6r\u00FCnmez olmak i\u00E7in in\u015Fa edildi.',
+                'work.fable.type':      'Yapay Zek\u00E2 Hikaye Platformu',
+                'work.fable.desc':      '3\u20118 ya\u015F i\u00E7in resimli, sesli uyku \u00F6ncesi hikayeleri. Yedi dilde \u00FCretilen ve sunulan alt\u0131 karakter serisi.',
+                'footer.locations':     '<strong>GAND.TR</strong> \u2002//\u2002 \u0130stanbul \u2002//\u2002 Tokyo',
+                'footer.copyright':     '\u00A9 2025 Gand Teknoloji Hizmetleri.'
+            },
+            ja: {
+                'hero.title':           '\u5320\u3002\u6587\u5316\u3002\u30B3\u30FC\u30C9\u3002',
+                'hero.quote':           '\u300C\u4F7F\u3044\u6368\u3066\u306E\u30B9\u30AF\u30EA\u30D7\u30C8\u306F\u66F8\u304D\u307E\u305B\u3093\u3002<br>\u6C38\u304F\u6B8B\u308B\u30BD\u30D5\u30C8\u30A6\u30A7\u30A2\u3092\u5275\u308A\u307E\u3059\u3002\u300D',
+                'hero.cta':             '\u304A\u554F\u3044\u5408\u308F\u305B',
+                'staff.title':          '\u6756 (Gandr)',
+                'staff.desc':           '\u65C5\u4EBA\u3068\u5275\u308A\u624B\u306E\u8C61\u5FB4\u3002\u8907\u96D1\u306A\u30B7\u30B9\u30C6\u30E0\u3092\u6E21\u308A\u6B69\u304D\u3001\u6700\u9069\u306A\u30C4\u30FC\u30EB\u3092\u6A5F\u80FD\u7684\u306A\u529B\u306B\u5909\u3048\u307E\u3059\u3002\u5E38\u306B\u76EE\u306E\u524D\u306E\u8AB2\u984C\u306B\u6700\u3082\u3075\u3055\u308F\u3057\u3044\u624B\u6BB5\u3092\u3002',
+                'stone.title':          '\u77F3 (Balbal)',
+                'stone.desc':           '\u6C38\u9060\u306E\u756A\u4EBA\u3002\u8349\u539F\u306E\u30D0\u30EB\u30D0\u30EB\u306E\u3088\u3046\u306B\u3001\u79C1\u305F\u3061\u306E\u30A4\u30F3\u30D5\u30E9\u306F\u6642\u3068\u74B0\u5883\u306B\u8010\u3048\u62DC\u3057\u307E\u3059\u3002\u5805\u7262\u3067\u6301\u7D9A\u53EF\u80FD\u306A\u30B7\u30B9\u30C6\u30E0\u3002',
+                'services.heading':     '\u79C1\u305F\u3061\u306E\u6280',
+                'svc.carving.name':     '\u5F6B\u523B',
+                'svc.carving.desc':     '<strong>\u30D3\u30B9\u30DD\u30FC\u30AF\u958B\u767A\u3002</strong>\u7CBE\u5BC6\u304B\u3064\u4E01\u5BE7\u306B\u69CB\u7BC9\u3055\u308C\u305F\u30D0\u30C3\u30AF\u30A8\u30F3\u30C9\u30B7\u30B9\u30C6\u30E0\u3002\u6848\u4EF6\u3054\u3068\u306B\u6700\u9069\u306A\u6280\u8853\u3092\u9078\u5B9A\u3057\u3001AI\u3092\u6D3B\u7528\u3057\u3066\u54C1\u8CEA\u3092\u72A0\u7272\u306B\u305B\u305A\u7D0D\u54C1\u3092\u52A0\u901F\u3057\u307E\u3059\u3002',
+                'svc.foundation.name':  '\u57FA\u76E4',
+                'svc.foundation.desc':  '<strong>\u30B7\u30B9\u30C6\u30E0\u30A2\u30FC\u30AD\u30C6\u30AF\u30C1\u30E3\u3002</strong>\u304A\u5BA2\u69D8\u306E\u4E8B\u696D\u57FA\u76E4\u3092\u69CB\u7BC9\u3057\u307E\u3059\u3002\u30B9\u30B1\u30FC\u30E9\u30D6\u30EB\u306A\u30AF\u30E9\u30A6\u30C9\u30A4\u30F3\u30D5\u30E9\u3001\u30BB\u30AD\u30E5\u30A2\u306A\u30CD\u30C3\u30C8\u30EF\u30FC\u30AF\u3001\u305D\u3057\u3066\u4E8B\u696D\u3068\u3068\u3082\u306B\u6210\u9577\u3059\u308BAI\u30EF\u30FC\u30AF\u30D5\u30ED\u30FC\u3002',
+                'svc.restoration.name': '\u5FA9\u5143',
+                'svc.restoration.desc': '<strong>\u30EC\u30AC\u30B7\u30FC\u30B3\u30F3\u30B5\u30EB\u30C6\u30A3\u30F3\u30B0\u3002</strong>\u5B9F\u7E3E\u3042\u308B\u30B7\u30B9\u30C6\u30E0\u306B\u306F\u4E01\u5BE7\u306A\u9032\u5316\u304C\u5FC5\u8981\u3067\u3059\u3002\u5B9F\u7528\u7684\u306A\u30A2\u30D7\u30ED\u30FC\u30C1\u3067\u30EC\u30AC\u30B7\u30FC\u30B3\u30FC\u30C9\u3092\u8FD1\u4EE3\u5316\u3057\u3001\u6A5F\u80FD\u3059\u308B\u90E8\u5206\u3092\u5B88\u308A\u306A\u304C\u3089\u6B21\u306E\u6642\u4EE3\u306B\u5099\u3048\u307E\u3059\u3002',
+                'works.heading':        '\u5B9F\u7E3E',
+                'works.subtitle':       '\u958B\u767A\u30FB\u904B\u55B6\u3057\u3066\u3044\u308B\u30D7\u30ED\u30C0\u30AF\u30C8',
+                'work.skriv.type':      '\u30D7\u30ED\u30B0\u30EC\u30C3\u30B7\u30D6\u30A6\u30A7\u30D6\u30A2\u30D7\u30EA',
+                'work.skriv.desc':      '\u6DF1\u3044\u8AAD\u66F8\u306E\u305F\u3081\u306E\u30DF\u30CB\u30DE\u30EB\u3067\u96C6\u4E2D\u3067\u304D\u308B\u74B0\u5883\u3002\u96C6\u4E2D\u306E\u305F\u3081\u306B\u8A2D\u8A08\u3055\u308C\u3001\u900F\u660E\u306B\u306A\u308B\u3088\u3046\u4F5C\u3089\u308C\u307E\u3057\u305F\u3002',
+                'work.fable.type':      'AI\u30B9\u30C8\u30FC\u30EA\u30FC\u30D7\u30E9\u30C3\u30C8\u30D5\u30A9\u30FC\u30E0',
+                'work.fable.desc':      '3\u301C8\u6B73\u5411\u3051\u306E\u30A4\u30E9\u30B9\u30C8\u4ED8\u304D\u30CA\u30EC\u30FC\u30B7\u30E7\u30F3\u4ED8\u304D\u304A\u3084\u3059\u307F\u7269\u8A9E\u30027\u8A00\u8A9E\u3067\u5C55\u958B\u3059\u308B6\u3064\u306E\u30AD\u30E3\u30E9\u30AF\u30BF\u30FC\u30B7\u30EA\u30FC\u30BA\u3002',
+                'footer.locations':     '<strong>GAND.TR</strong> \u2002//\u2002 \u30A4\u30B9\u30BF\u30F3\u30D6\u30FC\u30EB \u2002//\u2002 \u6771\u4EAC',
+                'footer.copyright':     '\u00A9 2025 Gand Technology Services.'
+            }
+        };
+
+        function applyLang(lang) {
+            root.setAttribute('data-lang', lang);
+            root.lang = lang;
+            localStorage.setItem('gand-lang', lang);
+            for (var i = 0; i < langOptions.length; i++) {
+                langOptions[i].classList.toggle('active', langOptions[i].getAttribute('data-lang') === lang);
+            }
+            var dict = T[lang];
+            if (!dict) return;
+            var els = document.querySelectorAll('[data-i18n]');
+            for (var j = 0; j < els.length; j++) {
+                var key = els[j].getAttribute('data-i18n');
+                if (dict[key] != null) els[j].innerHTML = dict[key];
+            }
+        }
+
+        applyLang(root.getAttribute('data-lang') || 'en');
+
+        langToggle.addEventListener('click', function(e) {
+            var opt = e.target.closest('.lang-toggle__option');
+            if (opt) applyLang(opt.getAttribute('data-lang'));
+        });
+
+        langToggle.addEventListener('keydown', function(e) {
+            var idx = LANGS.indexOf(root.getAttribute('data-lang'));
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                e.preventDefault(); applyLang(LANGS[(idx + 1) % 3]);
+            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                e.preventDefault(); applyLang(LANGS[(idx + 2) % 3]);
+            }
+        });
+    })();
+    </script>
 
 </body>
 </html>
